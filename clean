@@ -38,3 +38,7 @@ then
     echo "ERROR: Expected 7 columns in the input"
     exit 1
 fi
+
+# Write the cleaned header without the ratings_disabled column
+head -n 1 "$file" | cut -d ',' -f1-6 > trending_videos_clean.csv
+
