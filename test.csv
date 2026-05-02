@@ -1,0 +1,6 @@
+video_id,publish_date,views,likes,dislikes,comments_disabled,ratings_disabled
+id6058,2017-11-09T18:01:04.000Z,2259,0,0,FALSE,FALSE
+,2016-10-14T21:14:51.000Z,15058,0,0,TRUE,TRUE
+,2017-10-28T11:15:14.000Z,2197,0,2,FALSE,FALSE
+,2016-10-14T21:14:51.000Z,34207,0,0,TRUE,TRUE
+bad,line
