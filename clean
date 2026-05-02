@@ -9,6 +9,13 @@ then
     exit 1
 fi
 
+# Check that the input file has a .csv extension
+if ! echo "$file" | grep '\.csv$' > /dev/null
+then
+    echo "ERROR: Input file expected in a CSV format"
+    exit 1
+fi
+
 # Check file exists in current directory
 if test ! -f "$file"
 then
