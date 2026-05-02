@@ -9,6 +9,15 @@ then
     exit 1
 fi
 
+# Check that each row has exactly 7 columns
+bad_rows=$(awk -F',' 'NF != 7 {print; exit}' "$file")
+
+if test -n "$bad_rows"
+then
+    echo "ERROR: Expected 7 columns in the input"
+    exit 1
+fi
+
 # Check that the input file is not empty
 if test ! -s "$file"
 then
