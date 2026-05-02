@@ -9,19 +9,10 @@ then
     exit 1
 fi
 
-# Check that each row has exactly 7 columns
-bad_rows=$(awk -F',' 'NF != 7 {print; exit}' "$file")
-
-if test -n "$bad_rows"
+# Check file exists in current directory
+if test ! -f "$file"
 then
-    echo "ERROR: Expected 7 columns in the input"
-    exit 1
-fi
-
-# Check that the input file is not empty
-if test ! -s "$file"
-then
-    echo "ERROR: Empty file provided"
+    echo "ERROR: Input file not found in the current directory"
     exit 1
 fi
 
@@ -32,9 +23,18 @@ then
     exit 1
 fi
 
-# Check file exists in current directory
-if test ! -f "$file"
+# Check that the input file is not empty
+if test ! -s "$file"
 then
-    echo "ERROR: Input file not found in the current directory"
+    echo "ERROR: Empty file provided"
+    exit 1
+fi
+
+# Check that each row has exactly 7 columns
+bad_rows=$(awk -F',' 'NF != 7 {print; exit}' "$file")
+
+if test -n "$bad_rows"
+then
+    echo "ERROR: Expected 7 columns in the input"
     exit 1
 fi
