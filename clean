@@ -54,4 +54,3 @@ NF == 7 && $1 != "" && $2 != "" && $3 != "" && $4 != "" && $5 != "" && $4 != 0 &
     }
 }
 ' >> trending_videos_clean.csv
-echo "Cleaning complete. Output written to trending_videos_clean.csv"
