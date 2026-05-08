@@ -15,3 +15,10 @@ then
     echo "ERROR: Input file not found in the current directory"
     exit 1
 fi
+
+# Check file is not empty
+if test ! -s "$file"
+then
+    echo "ERROR: Empty file provided"
+    exit 1
+fi
