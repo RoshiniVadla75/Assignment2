@@ -29,3 +29,12 @@ then
     echo "ERROR: Input file expected in a CSV format"
     exit 1
 fi
+
+# Check that each row has exactly 6 columns
+bad_rows=$(awk -F',' 'NF != 6 {print; exit}' "$file")
+
+if test -n "$bad_rows"
+then
+    echo "ERROR: Expected 6 columns in cleaned dataset"
+    exit 1
+fi
