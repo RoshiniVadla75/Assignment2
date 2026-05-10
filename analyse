@@ -38,3 +38,7 @@ then
     echo "ERROR: Expected 6 columns in cleaned dataset"
     exit 1
 fi
+# Find the video_id that appears most often in the cleaned data.
+most_frequent=$(tail -n +2 "$file" | cut -d ',' -f1 | sort | uniq -c | sort -nr | head -n 1 | tr -s ' ' | cut -d ' ' -f3)
+
+echo "Most frequent video, ID: $most_frequent"
