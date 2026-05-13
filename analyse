@@ -47,3 +47,9 @@ echo "Most frequent video, ID: $most_frequent"
 mean_views=$(tail -n +2 "$file" | awk -F',' '{total += $3; count += 1} END {printf "%.2f", total / count}')
 
 echo "Mean number of views: $mean_views"
+
+# Find the video_id with the highest number of dislikes.
+max_dislikes=$(tail -n +2 "$file" | sort -t',' -k5 -nr | head -n 1 | cut -d ',' -f1)
+
+echo "Max dislikes video, ID: $max_dislikes"
+
