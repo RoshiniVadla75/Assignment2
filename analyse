@@ -42,3 +42,8 @@ fi
 most_frequent=$(tail -n +2 "$file" | cut -d ',' -f1 | sort | uniq -c | sort -nr | head -n 1 | tr -s ' ' | cut -d ' ' -f3)
 
 echo "Most frequent video, ID: $most_frequent"
+
+# Calculate the mean number of views to two decimal places.
+mean_views=$(tail -n +2 "$file" | awk -F',' '{total += $3; count += 1} END {printf "%.2f", total / count}')
+
+echo "Mean number of views: $mean_views"
