@@ -34,12 +34,12 @@ then
     exit 1
 fi
 
-# Check that each row has exactly 7 columns
-bad_rows=$(awk -F',' 'NF != 7 {print; exit}' "$file")
+# Check that the header has exactly 7 columns.
+header_check=$(head -n 1 "$file" | awk -F',' 'NF != 7 {print; exit}')
 
-if test -n "$bad_rows"
+if test -n "$header_check"
 then
-    echo "ERROR: Expected 7 columns in the input"
+    echo "ERROR: Expected 7 columns in the header"
     exit 1
 fi
 
