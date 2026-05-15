@@ -12,6 +12,15 @@ then
     exit 1
 fi
 
+# Check header has exactly the expected columns.
+header=$(head -n 1 "$file")
+
+if test "$header" != "video_id,publish_date,views,likes,dislikes,comments_disabled"
+then
+    echo "ERROR: Invalid cleaned dataset format"
+    exit 1
+fi
+
 # Check file exists
 if test ! -f "$file"
 then
