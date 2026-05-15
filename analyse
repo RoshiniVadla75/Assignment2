@@ -70,27 +70,27 @@ max_dislikes=$(echo "$dislike_rows" | awk -F',' -v max="$max_dislike_value" '$5 
 echo "Max dislikes video, ID: $max_dislikes"
 
 # Find the video with the highest engagement rate: (likes + dislikes) / views.
-highest_engagement=$(tail -n +2 "$file" | awk -F',' '
+engagement_rows=$(tail -n +2 "$file" | awk -F',' '
 {
     rate = ($4 + $5) / $3
     print $1 "," $2 "," rate
 }
-' | sort -t',' -k3 -nr | head -n 1)
+' | sort -t',' -k3 -nr)
 
-engagement_id=$(echo "$highest_engagement" | cut -d ',' -f1)
-engagement_date=$(echo "$highest_engagement" | cut -d ',' -f2)
+max_engagement_rate=$(echo "$engagement_rows" | head -n 1 | cut -d ',' -f3)
+highest_engagement=$(echo "$engagement_rows" | awk -F',' -v max="$max_engagement_rate" '$3 == max {print $1 ", dated: " $2}' | paste -sd ';' -)
 
-echo "Highest engagement rate video, ID: $engagement_id, dated: $engagement_date"
+echo "Highest engagement rate video, ID: $highest_engagement"
 
 # Find the video with the lowest net sentiment rate: (likes - dislikes) / views.
-lowest_sentiment=$(tail -n +2 "$file" | awk -F',' '
+sentiment_rows=$(tail -n +2 "$file" | awk -F',' '
 {
     rate = ($4 - $5) / $3
     print $1 "," $2 "," rate
 }
-' | sort -t',' -k3 -n | head -n 1)
+' | sort -t',' -k3 -n)
 
-sentiment_id=$(echo "$lowest_sentiment" | cut -d ',' -f1)
-sentiment_date=$(echo "$lowest_sentiment" | cut -d ',' -f2)
+min_sentiment_rate=$(echo "$sentiment_rows" | head -n 1 | cut -d ',' -f3)
+lowest_sentiment=$(echo "$sentiment_rows" | awk -F',' -v min="$min_sentiment_rate" '$3 == min {print $1 ", dated: " $2}' | paste -sd ';' -)
 
-echo "Least sentiment rate video, ID: $sentiment_id, dated: $sentiment_date"
+echo "Least sentiment rate video, ID: $lowest_sentiment"
