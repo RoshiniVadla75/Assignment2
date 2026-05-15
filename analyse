@@ -51,7 +51,9 @@ then
     exit 1
 fi
 # Find the video_id that appears most often in the cleaned data.
-most_frequent=$(tail -n +2 "$file" | cut -d ',' -f1 | sort | uniq -c | sort -nr | head -n 1 | tr -s ' ' | cut -d ' ' -f3)
+video_counts=$(tail -n +2 "$file" | cut -d ',' -f1 | sort | uniq -c | sort -nr)
+highest_count=$(echo "$video_counts" | head -n 1 | tr -s ' ' | cut -d ' ' -f2)
+most_frequent=$(echo "$video_counts" | tr -s ' ' | grep "^ $highest_count " | cut -d ' ' -f3 | paste -sd ', ' -)
 
 echo "Most frequent video, ID: $most_frequent"
 
