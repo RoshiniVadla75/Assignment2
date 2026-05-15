@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# 24324533 - CITS4407 Assignment 2 - clean
+# Clean the raw trending videos CSV file and write the cleaned result to trending_videos_clean.csv.
+# The script first checks the input file, then removes invalid rows, duplicate rows,
+# the ratings_disabled column, and the time portion of publish_date values.
 
 file="$1"
 

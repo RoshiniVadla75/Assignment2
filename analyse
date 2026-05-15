@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-
+# 24324533 - CITS4407 Assignment 2 - analyse
+# Analyse the cleaned trending videos CSV file and print the required summary results.
+# The script checks the input file first, then calculates frequency, average views,
+# maximum dislikes, engagement rate, and sentiment rate.
 file="$1"
 
 # Must have exactly one argument
@@ -66,3 +69,15 @@ engagement_date=$(echo "$highest_engagement" | cut -d ',' -f2)
 
 echo "Highest engagement rate video, ID: $engagement_id, dated: $engagement_date"
 
+# Find the video with the lowest net sentiment rate: (likes - dislikes) / views.
+lowest_sentiment=$(tail -n +2 "$file" | awk -F',' '
+{
+    rate = ($4 - $5) / $3
+    print $1 "," $2 "," rate
+}
+' | sort -t',' -k3 -n | head -n 1)
+
+sentiment_id=$(echo "$lowest_sentiment" | cut -d ',' -f1)
+sentiment_date=$(echo "$lowest_sentiment" | cut -d ',' -f2)
+
+echo "Least sentiment rate video, ID: $sentiment_id, dated: $sentiment_date"
