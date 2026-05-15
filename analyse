@@ -12,19 +12,17 @@ then
     exit 1
 fi
 
-# Check header has exactly the expected columns.
-header=$(head -n 1 "$file")
-
-if test "$header" != "video_id,publish_date,views,likes,dislikes,comments_disabled"
-then
-    echo "ERROR: Invalid cleaned dataset format"
-    exit 1
-fi
-
 # Check file exists
 if test ! -f "$file"
 then
     echo "ERROR: Input file not found in the current directory"
+    exit 1
+fi
+
+# Check that the input file has a .csv extension
+if ! echo "$file" | grep '\.csv$' > /dev/null
+then
+    echo "ERROR: Input file expected in a CSV format"
     exit 1
 fi
 
@@ -35,10 +33,12 @@ then
     exit 1
 fi
 
-# Check that the input file has a .csv extension
-if ! echo "$file" | grep '\.csv$' > /dev/null
+# Check header has exactly the expected columns.
+header=$(head -n 1 "$file")
+
+if test "$header" != "video_id,publish_date,views,likes,dislikes,comments_disabled"
 then
-    echo "ERROR: Input file expected in a CSV format"
+    echo "ERROR: Invalid cleaned dataset format"
     exit 1
 fi
 
