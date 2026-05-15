@@ -63,7 +63,9 @@ mean_views=$(tail -n +2 "$file" | awk -F',' '{total += $3; count += 1} END {prin
 echo "Mean number of views: $mean_views"
 
 # Find the video_id with the highest number of dislikes.
-max_dislikes=$(tail -n +2 "$file" | sort -t',' -k5 -nr | head -n 1 | cut -d ',' -f1)
+dislike_rows=$(tail -n +2 "$file" | sort -t',' -k5 -nr)
+max_dislike_value=$(echo "$dislike_rows" | head -n 1 | cut -d ',' -f5)
+max_dislikes=$(echo "$dislike_rows" | awk -F',' -v max="$max_dislike_value" '$5 == max {print $1}' | paste -sd ', ' -)
 
 echo "Max dislikes video, ID: $max_dislikes"
 
