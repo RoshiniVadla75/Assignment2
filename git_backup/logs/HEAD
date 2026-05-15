@@ -1,0 +1,33 @@
+0000000000000000000000000000000000000000 737af0a67f3bacb73cb18998da257faac227a896 root <root@3dc262d7-0bf8-4b99-9aa4-9aab3f710456.iz3d4a41u2xu1gqp3kcju2fuia.cbrx.internal.cloudapp.net> 1777691336 +0000	clone: from https://github.com/RoshiniVadla75/Assignment2
+737af0a67f3bacb73cb18998da257faac227a896 048079ce0cc1cb4e78ccb809add13e81e530ea36 RoshiniVadla75 <roshini75vadla@gmail.com> 1777691558 +0000	commit: Set up Assignment 2 files
+048079ce0cc1cb4e78ccb809add13e81e530ea36 7f13df54c2a5207ebb2d890894155845cb4c2d34 RoshiniVadla75 <roshini75vadla@gmail.com> 1777697377 +0000	commit: add no-input check to clean
+7f13df54c2a5207ebb2d890894155845cb4c2d34 99b4f1752deb8da9a20d70697e9ba47d3d7bc97e RoshiniVadla75 <roshini75vadla@gmail.com> 1777697431 +0000	commit: Add argument count validation to clean script
+99b4f1752deb8da9a20d70697e9ba47d3d7bc97e 908746db1c797b070aa00aa647f81151e5ad725d RoshiniVadla75 <roshini75vadla@gmail.com> 1777697523 +0000	commit: Fix argument check to accept one input file
+908746db1c797b070aa00aa647f81151e5ad725d e2d38abc23a33532af40f451ba2ca31c933a00a1 RoshiniVadla75 <roshini75vadla@gmail.com> 1777697619 +0000	commit: Fix argument handling and remove redundant checks
+e2d38abc23a33532af40f451ba2ca31c933a00a1 ac4a34c38f97dfb5952d41abee70e903804700dc RoshiniVadla75 <roshini75vadla@gmail.com> 1777697964 +0000	commit: Add CSV format check for clean script
+ac4a34c38f97dfb5952d41abee70e903804700dc 0a2a9a4c9db54973b185a429d948f11b266cb553 RoshiniVadla75 <roshini75vadla@gmail.com> 1777698066 +0000	commit: Add empty file check for clean script
+0a2a9a4c9db54973b185a429d948f11b266cb553 639ed6c6430e0349b24005ee932755708190effc RoshiniVadla75 <roshini75vadla@gmail.com> 1777698134 +0000	commit: Add column count validation for clean script
+639ed6c6430e0349b24005ee932755708190effc a2ca96b839365f0df0db8d786fd852964cf3f6c0 RoshiniVadla75 <roshini75vadla@gmail.com> 1777698316 +0000	commit: Reorder clean script error checks
+a2ca96b839365f0df0db8d786fd852964cf3f6c0 ff25b95cb87f700457a727cb5faa39a1efc3efe9 RoshiniVadla75 <roshini75vadla@gmail.com> 1777698429 +0000	commit: Test clean script error checks
+ff25b95cb87f700457a727cb5faa39a1efc3efe9 aa8e0266ebf6fbfe85b4e782aa4e7022c39ad1b5 RoshiniVadla75 <roshini75vadla@gmail.com> 1777698758 +0000	commit: Write cleaned CSV header
+aa8e0266ebf6fbfe85b4e782aa4e7022c39ad1b5 278348f1379cd3930c2cf712e8ec65e718689845 RoshiniVadla75 <roshini75vadla@gmail.com> 1777796526 +0000	commit: Add data cleaning logic for video dataset
+278348f1379cd3930c2cf712e8ec65e718689845 db256eda1afaab6d40379d4940030cf0b15aba1a RoshiniVadla75 <roshini75vadla@gmail.com> 1777796881 +0000	commit: Remove rows with missing required values
+db256eda1afaab6d40379d4940030cf0b15aba1a 9c647a543136e2e017322e35c48ed89afe3433b4 RoshiniVadla75 <roshini75vadla@gmail.com> 1778113394 +0000	commit: Add completion message to clean script
+9c647a543136e2e017322e35c48ed89afe3433b4 39b6735374df94424d74482e2892cb537dbc8846 RoshiniVadla75 <roshini75vadla@gmail.com> 1778113764 +0000	commit: Complete initial clean script
+39b6735374df94424d74482e2892cb537dbc8846 b3398c9de7425397ace5527493e54858e10cc8a3 RoshiniVadla75 <roshini75vadla@gmail.com> 1778230395 +0000	commit: Add README documentation
+b3398c9de7425397ace5527493e54858e10cc8a3 34eca31fe339ee7d9294a587ed7e5d13dc91dab6 RoshiniVadla75 <roshini75vadla@gmail.com> 1778230553 +0000	commit: Remove temporary testing files
+34eca31fe339ee7d9294a587ed7e5d13dc91dab6 21a91d8306ec2158fc83ced5d865d778726fa034 RoshiniVadla75 <roshini75vadla@gmail.com> 1778230766 +0000	commit: Add argument check to analyse script
+21a91d8306ec2158fc83ced5d865d778726fa034 920539fa43348f77852b3299b87f95318baac7b2 RoshiniVadla75 <roshini75vadla@gmail.com> 1778230914 +0000	commit: Add file existence check to analyse script
+920539fa43348f77852b3299b87f95318baac7b2 b4365ddf17fc0809648cd816347e491d3a8d81ce RoshiniVadla75 <roshini75vadla@gmail.com> 1778233404 +0000	commit: Add empty file validation to analyse script
+b4365ddf17fc0809648cd816347e491d3a8d81ce f4aba6685a17cd1cc3f811ef9c56ecb8634d6ada RoshiniVadla75 <roshini75vadla@gmail.com> 1778233595 +0000	commit: Add CSV format validation to analyse script
+f4aba6685a17cd1cc3f811ef9c56ecb8634d6ada 549cb5e4abbb9a9763c81ef25569b305761851e2 RoshiniVadla75 <roshini75vadla@gmail.com> 1778392583 +0000	commit: Add column count validation to analyse script
+549cb5e4abbb9a9763c81ef25569b305761851e2 675f953d6e484bcb76c0ea5d7e48ff7e17323de5 RoshiniVadla75 <roshini75vadla@gmail.com> 1778392819 +0000	commit: Calculate most frequent video in analyse script
+675f953d6e484bcb76c0ea5d7e48ff7e17323de5 a6bae46882fcaa4d75f6dc8293a4bdc45c8a4b04 RoshiniVadla75 <roshini75vadla@gmail.com> 1778659299 +0000	commit: Add gitignore for temporary files
+a6bae46882fcaa4d75f6dc8293a4bdc45c8a4b04 c70cb118c9603583c2477e7185079a909cfaaaf5 RoshiniVadla75 <roshini75vadla@gmail.com> 1778660508 +0000	commit: Calculate mean views in analyse script
+c70cb118c9603583c2477e7185079a909cfaaaf5 331f1486192d1a4391265be81ddf7612959b274a RoshiniVadla75 <roshini75vadla@gmail.com> 1778660803 +0000	commit: Find video with maximum dislikes
+331f1486192d1a4391265be81ddf7612959b274a 80088dca7a19c730e8fa98700b3e2d331cef80b2 RoshiniVadla75 <roshini75vadla@gmail.com> 1778661125 +0000	commit: Calculate highest engagement rate
+80088dca7a19c730e8fa98700b3e2d331cef80b2 b3fff3431e75934acc3db24f49dbf2faa7868f75 RoshiniVadla75 <roshini75vadla@gmail.com> 1778831470 +0000	commit: Add script headers and sentiment calculation
+b3fff3431e75934acc3db24f49dbf2faa7868f75 4a2fec9b32ac1f37839e638d60a8e20e50a927f2 RoshiniVadla75 <roshini75vadla@gmail.com> 1778831594 +0000	commit: Compare generated clean output with reference data
+4a2fec9b32ac1f37839e638d60a8e20e50a927f2 4b7856c10a756ee5a79e2b27e2cf17a02eccfe29 RoshiniVadla75 <roshini75vadla@gmail.com> 1778831630 +0000	commit: Remove reference clean comparison file
+4b7856c10a756ee5a79e2b27e2cf17a02eccfe29 9f536216859bba8a4e56802d0cc3f88cc83a28a1 RoshiniVadla75 <roshini75vadla@gmail.com> 1778831891 +0000	commit: Validate cleaned dataset header format
+9f536216859bba8a4e56802d0cc3f88cc83a28a1 22c9aa73530b1ad6322992c8937f2cdd5140de86 RoshiniVadla75 <roshini75vadla@gmail.com> 1778832219 +0000	commit: Remove temporary test files
